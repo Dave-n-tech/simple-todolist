@@ -14,7 +14,7 @@ app.use(express.static("public"));
 
 //database connection
 mongoose
-  .connect("mongodb://0.0.0.0:27017/todolistDB")
+  .connect("mongodb+srv://davidtheartist2003:12code2003@todolistdb.zcpifum.mongodb.net/?retryWrites=true&w=majority&appName=todolistDB/todolistDB")
   .then(() => {
     console.log("connected to database");
   })
