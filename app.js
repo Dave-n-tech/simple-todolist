@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -14,7 +15,7 @@ app.use(express.static("public"));
 
 //database connection
 mongoose
-  .connect("mongodb+srv://davidtheartist2003:12code2003@todolistdb.zcpifum.mongodb.net/?retryWrites=true&w=majority&appName=todolistDB/todolistDB")
+  .connect(process.env.DATABASE_URL)
   .then(() => {
     console.log("connected to database");
   })
